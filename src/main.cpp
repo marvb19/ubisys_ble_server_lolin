@@ -11,6 +11,8 @@
 #include <Wire.h>
 //i2c Slave Address
 #define I2C_DEV_ADDR 0x55
+#define SCL 4
+#define SDA 0
 int scl_pin = 4;
 int sda_pin = 0;
 
@@ -129,7 +131,7 @@ void setup()
   Wire.onReceive(onReceive);
   Wire.onRequest(onRequest);
   TwoWire Wire = TwoWire(0);
-  Wire.begin(sda_pin, scl_pin);
+  Wire.begin(SDA, SCL);
   Wire.beginTransmission((uint8_t)I2C_DEV_ADDR);
 
   #if CONFIG_IDF_TARGET_ESP32
