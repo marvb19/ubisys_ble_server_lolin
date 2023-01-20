@@ -13,8 +13,6 @@
 #define I2C_DEV_ADDR 0x55
 #define SCL 4
 #define SDA 0
-int scl_pin = 4;
-int sda_pin = 0;
 
 
 //#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
